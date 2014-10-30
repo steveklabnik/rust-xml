@@ -85,7 +85,7 @@ mod tests {
                 match e.as_writer_event() {
                     Some(e) => match w.write(e) {
                         Ok(_) => {},
-                        Err(e) => fail!("Writer error: {}", e)
+                        Err(e) => panic!("Writer error: {}", e)
                     },
                     None => println!("Non-writer event: {}", e)
                 }
